@@ -1323,7 +1323,7 @@
             <span class="glow-text">Happy<br>Birthday</span>
           </h1>
 
-          <div class="name" id="girlName">My Love</div>
+          <div class="name" id="girlName">My Love 🦋</div>
 
           <div class="typing-box">
             <p class="message"><span id="typedText"></span><span class="cursor"></span></p>
@@ -1340,11 +1340,11 @@
 
           <div class="secret-sign">
             <span class="small">A tiny secret only you know </span>
-            <span class="sig">👇</span>
+            <span class="sig">MY LOVE</span>
           </div>
 
           <div class="secret-code-box">
-            <span class="small">One more hidden note for 🫵</span>
+            <span class="small">One more hidden note for you</span>
             <button class="mini-btn" onclick="revealSecretCode()">Reveal our secret code ✨</button>
             <div class="secret-code-text" id="secretCodeText">
               It is me — your love, alphA ceN B. The name only you understand. ❤️
@@ -1357,12 +1357,12 @@
             <div class="wish-pill"><span>💖</span>Pure love</div>
           </div>
 
-          <button class="btn" onclick="openSecret()">Open my cute birthday letter 💌</button>
+          <button class="btn" onclick="scrollToBirthdayLetter()">Open my cute birthday letter 💌</button>
           <div class="scroll-cue">More love below ↓</div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="birthdayLetterSection">
         <h2 class="section-title">A soft little letter for you 💖</h2>
         <p class="love-letter">
           Today is not just your birthday for me. It is the day my favourite person came into this world.
@@ -1525,7 +1525,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="promiseHeartsSection">
         <h2 class="section-title">Tap 5 hearts to unlock my promise ❤️</h2>
 
         <div class="heart-game">
@@ -1588,7 +1588,7 @@
          Mobile browsers usually start music only after a user tap, so music starts after the Yes button is tapped.
     */
 
-    const herName = "My Love"; // Example: "Priya", "Ayesha", "Nisha"
+    const herName = "My Love 🦋"; // Example: "Priya", "Ayesha", "Nisha"
     const messageText =
       "Today is very special for me because it is the birthday of my favourite girl. You are my smile, my peace, and my cutest feeling. Happy Birthday, my love. I hope your life always stays full of happiness, love, dreams, and beautiful little moments. ❤️";
 
@@ -1671,6 +1671,17 @@
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 200);
     }
 
+    function scrollToBirthdayLetter() {
+      const letterSection = document.getElementById("birthdayLetterSection");
+
+      if (letterSection) {
+        letterSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+    
     function openSecret() {
       secret.classList.add("show");
       secret.scrollIntoView({ behavior: "smooth", block: "center" });
